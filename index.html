@@ -31,7 +31,7 @@
     msg.innerHTML = '<img src="icon-192.png" alt="">Sin conexión. Conectate y volvé a abrir la app.';
   } else {
     const f = document.createElement('iframe');
-    f.src = APP_URL;
+    f.src = APP_URL + (location.search || '');
     f.allow = 'clipboard-write';
     f.onload = () => splash.classList.add('hide');
     document.body.appendChild(f);

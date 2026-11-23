@@ -1,5 +1,5 @@
 // Guarda solo la "cáscara" de la app para que abra rápido. Los datos vienen en vivo de tu planilla.
-const CACHE = 'todos-v1';
+const CACHE = 'todos-v2';
 const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
